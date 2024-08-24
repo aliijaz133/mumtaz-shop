@@ -1,1 +1,28 @@
-<p>sidebar works!</p>
+<main class="d-flex flex-column position-sticky top-0">
+    <a routerLink="/home" class="a m-0">
+      <div class="d-flex justify-content-start align-items-center gap-4 pt-3 pb-3 logo-container">
+        <!-- <img
+          src="../../../../assets/images/icons/favicon.png"
+          alt="fav icon"
+          class="fav-icon"
+        />
+        <span class="fw-bold hms-title text-black align-text-top text-visiblity"
+          >Hamara Venue</span
+        > -->
+        <picture>
+          <source srcset="../../../assets/images/sidebar-icons/new-mob-logo.svg" media="(max-width: 1154px)" />
+          <img src="../../../assets/images/sidebar-icons/logo.png" alt="fav icon" class="fav-icon" />
+        </picture>
+      </div>
+    </a>
+  
+    <ng-container *ngFor="let link of links">
+      <a [routerLink]="link.routerLink" routerLinkActive="active" class="a">
+        <div class="d-flex justify-content-start align-items-center gap-4 p-4 item-link">
+          <!-- <span class="material-symbols-outlined">{{ link.icon }}</span> -->
+          <img [src]="getImgPath(link)" alt="" />
+          <span class="text-visiblity">{{ link.label }}</span>
+        </div>
+      </a>
+    </ng-container>
+  </main>

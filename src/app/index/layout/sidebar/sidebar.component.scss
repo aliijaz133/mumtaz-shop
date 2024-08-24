@@ -1,0 +1,89 @@
+$orange_color: #fb6f10;
+
+main {
+  height: 100vh;
+  overflow-y: auto;
+}
+
+a {
+  text-decoration: none;
+  color: #b1b1b1;
+}
+
+.a {
+  margin: 10px;
+}
+
+.item-link {
+  height: 55px;
+}
+
+.fav-icon {
+  height: 35px;
+  width: 35px;
+  margin-left: 25px;
+  /* Copy code to element you want to animate */
+  animation: customAni 2s cubic-bezier(0.22, 1, 0.36, 1) 0s 1 normal none;
+}
+
+.logo-container {
+  border-bottom: 2px solid #f0f0f0;
+  height: 100px;
+}
+
+.active {
+  background-color: $orange_color;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.hms-title {
+  font-family: "Yusei Magic", sans-serif;
+  font-size: 16px;
+}
+
+.text-visiblity {
+  display: none;
+}
+
+@media (min-width: 1170px) {
+  .text-visiblity {
+    display: block;
+  }
+}
+
+/* Copy this code after the above code */
+@keyframes customAni {
+  0% {
+    animation-timing-function: ease-out;
+    transform: scale(1);
+    transform-origin: center center;
+  }
+
+  10% {
+    animation-timing-function: ease-in;
+    transform: scale(0.91);
+  }
+
+  17% {
+    animation-timing-function: ease-out;
+    transform: scale(0.98);
+  }
+
+  33% {
+    animation-timing-function: ease-in;
+    transform: scale(0.87);
+  }
+
+  45% {
+    animation-timing-function: ease-out;
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 600px) {
+  main {
+    height: auto;
+    overflow-y: auto;
+  }
+}

@@ -1,19 +1,27 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {
+    path: '',
+    loadChildren: () =>
+      import('./index/index.module').then((m) => m.IndexModule),
+  },
+  {
+    path: 'auth',
+    loadChildren: () =>
+      import('./auth/login/login.module').then((m) => m.LoginModule),
+  },
+  {
+    path: '**',
+    component: PageNotFoundComponent,
+    pathMatch: 'full',
+  },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule {
-  // downloadImage() {
-  //   const link = document.createElement('a');
-  //   link.href = 'https://example.com/image.jpg';
-  //   link.download = 'image.jpg';
-  //   document.body.appendChild(link);
-  //   link.click();
-  //   document.body.removeChild(link);
-  // }
- }
+export class AppRoutingModule {}
