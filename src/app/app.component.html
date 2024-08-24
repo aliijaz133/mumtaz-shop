@@ -1,7 +1,29 @@
-<div class="d-flex flex-column justify-content-center align-content-center">
-  <h1>Mumtaz General Store Toorie Market Parachinar</h1>
+<div class="d-flex justify-content-center align-items-center custom-position">
+  <div class="d-flex flex-column align-items-center">
+    <h1 data-aos="fade-up" class="text-center">
+      Mumtaz General Store Toorie Market Parachinar
+    </h1>
+    <h3 data-aos="fade-up">Coming Soon...</h3>
 
-  <p>Coming Soon</p>
+    <hr />
+    <div
+      class="d-flex justify-content-center col-sm-12 col-md-12 col-lg-12 col-xl-12"
+    >
+      <div class="p-3 d-flex flex-column justify-content-around gap-2">
+        <h3 class="fw-bold m-0 h3-time" data-aos="fade-up">
+          {{ countdown }}
+        </h3>
+        <span
+          class="text-uppercase fst-italic d-flex gap-5 align-items-center span"
+          data-aos="fade-up"
+          ><p>Days</p>
+          <p>Hours</p>
+          <p>Mins</p>
+          <p>Secs</p></span
+        >
+      </div>
+    </div>
+  </div>
 </div>
 
 <router-outlet></router-outlet>
