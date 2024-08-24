@@ -30,6 +30,7 @@
               "src/assets"
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -93,12 +94,24 @@
               "src/assets"
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss"
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@netlify-builder/deploy:deploy",
+          "options": {
+            "outputPath": "dist/mumtaz-shop",
+            "netlifyToken": "nfp_H8qTvWiVQzgUepaNSfyb822YuJaxJq8r1bb4",
+            "siteId": "mumtaz-shop"
+          }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "f4ebd1c4-e060-4466-9e9a-83fe6ba1f79c"
   }
 }
