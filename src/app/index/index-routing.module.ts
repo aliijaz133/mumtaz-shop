@@ -41,6 +41,13 @@ const routes: Routes = [
             (mod) => mod.SettingComponent
           ),
       },
+      {
+        path: 'chat',
+        loadComponent: () =>
+          import('./chat-group/chat-group.component').then(
+            (mod) => mod.ChatGroupComponent
+          ),
+      },
     ],
   },
 ];

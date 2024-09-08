@@ -96,9 +96,17 @@ export class SidebarComponent implements OnInit {
       imgPath: '',
     },
     {
+      routerLink: '/chat',
+      icon: 'clinical_notes',
+      label: 'Group Chatting',
+      whiteImgPath: '../../../../assets/images/sidebar-icons/chat-blue.png',
+      grayImgPath: '../../../../assets/images/sidebar-icons/chat-gray.png',
+      imgPath: '',
+    },
+    {
       routerLink: '/profile',
       icon: 'account_circle',
-      label: 'Profile',
+      label: 'Profiles',
       whiteImgPath: '../../../../assets/images/sidebar-icons/profile-white.png',
       grayImgPath: '../../../../assets/images/sidebar-icons/profile-gray.png',
       imgPath: '',

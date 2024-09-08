@@ -1,1 +1,173 @@
-<p>chat-group works!</p>
+<article
+  style="background-color: rgb(245, 245, 245); width: -webkit-fill-available"
+>
+  <div class="massege-container">
+    <div class="name-container">
+      <div class="img-title">
+        <mat-icon>menu</mat-icon>
+        <div class="group">
+          <svg viewBox="0 0 24 24" aria-hidden="true" class="icon">
+            <g>
+              <path
+                d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"
+              ></path>
+            </g>
+          </svg>
+          <input class="input" type="search" placeholder="Search" />
+        </div>
+      </div>
+      <div class="img-title bg-secondary p-3">
+        <img
+          src="../../../assets/images/sidebar-icons/logo.png"
+          alt="Image"
+          style="width: 35px; border-radius: 50%; border: 1px solid dashed"
+        />
+        <div class="name-last_text">
+          <h5 matBadge="4" class="text-white">Group Chatting</h5>
+          <p class="last-text text-truncate text-white m-0">
+            Chatgram Web was updated.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="text-massage__container">
+      <div class="avatar-time">
+        <div class="pic-container">
+          <div class="img-title">
+            <img
+              src="../../../assets/images/sidebar-icons/logo.png"
+              alt="Image"
+              style="width: 35px; margin-top: 10px; margin-left: 35px"
+            />
+            <div class="name-last_text" style="margin-top: 10px">
+              <h5 class="text-white">Group Chatting</h5>
+              <p class="last-text text-truncate text-white-50">
+                Chatgram Web was updated.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="icons-container">
+          <mat-icon style="cursor: pointer">search</mat-icon>
+          <mat-icon style="cursor: pointer">local_phone</mat-icon>
+          <mat-icon style="cursor: pointer">more_vert</mat-icon>
+        </div>
+      </div>
+
+      <div class="message-container" id="chatContainer">
+        <div class="message-displayed__container">
+          <div class="d-flex justify-content-end">
+            <div class="d-flex flex-column m-2 message-text__width">
+              <p class="text-white m-0 time-now align-self-start">You</p>
+              <div
+                class="bg-info p-2 rounded-2 message-text"
+                [matMenuTriggerFor]="menu"
+              >
+                Hey! How are you?
+              </div>
+              <p class="text-success m-0 time-now">
+                1h ago <mat-icon class="time-now mat-icon">check</mat-icon>
+              </p>
+            </div>
+            <mat-menu #menu="matMenu">
+              <button type="button" mat-menu-item>
+                <mat-icon>delete_forever</mat-icon>
+                <span>Delete</span>
+              </button>
+            </mat-menu>
+          </div>
+
+          <div class="d-flex justify-content-end">
+            <div class="d-flex flex-column m-2 message-text__width">
+              <p class="text-white m-0 time-now align-self-start">You</p>
+              <div class="bg-info p-2 rounded-2 message-text">
+                Hey! How are you?
+              </div>
+              <p class="text-success m-0 time-now">
+                3min ago <mat-icon class="time-now mat-icon">check</mat-icon>
+              </p>
+            </div>
+          </div>
+
+          <div class="d-flex justify-content-end">
+            <div class="d-flex flex-column m-2 message-text__width">
+              <p class="text-white m-0 time-now align-self-start">You</p>
+              <div class="bg-info p-2 rounded-2 message-text">
+                Hey! How are you?
+              </div>
+              <p class="text-success m-0 time-now">
+                1min ago <mat-icon class="time-now mat-icon">check</mat-icon>
+              </p>
+            </div>
+          </div>
+
+          <div class="d-flex justify-content-end">
+            <div class="d-flex flex-column m-2 message-text__width">
+              <p class="text-white m-0 time-now align-self-start">You</p>
+              <div class="bg-info p-2 rounded-2 message-text">
+                Hey! How are you?
+              </div>
+              <p class="text-success m-0 time-now">
+                Just Now <mat-icon class="time-now mat-icon">check</mat-icon>
+              </p>
+            </div>
+          </div>
+
+          <div class="d-flex justify-content-end">
+            <div class="d-flex flex-column m-2 message-text__width">
+              <p class="text-white m-0 time-now align-self-start">You</p>
+              <div class="bg-info p-2 rounded-2 message-text">
+                Hey! How are you?
+              </div>
+              <p class="text-success m-0 time-now">
+                Just Now <mat-icon class="time-now mat-icon">check</mat-icon>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <form
+        [formGroup]="chatGroup"
+        (ngSubmit)="sendMessage()"
+        class="text-area__box"
+      >
+        <div class="searchbar">
+          <div class="searchbar-wrapper">
+            <div class="searchbar-left">
+              <div class="search-icon-wrapper">
+                <mat-icon style="color: #707991"
+                  >sentiment_satisfied_alt</mat-icon
+                >
+              </div>
+            </div>
+
+            <div class="searchbar-center">
+              <div class="searchbar-input-spacer"></div>
+
+              <input
+                type="text"
+                class="searchbar-input"
+                maxlength="2048"
+                formControlName="message"
+                autocapitalize="off"
+                role="combobox"
+                spellcheck="true"
+                placeholder="Message"
+                autocomplete="off"
+              />
+            </div>
+
+            <button
+              [disabled]="chatGroup.invalid"
+              type="submit"
+              class="searchbar-right"
+            >
+              <mat-icon>send</mat-icon>
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</article>

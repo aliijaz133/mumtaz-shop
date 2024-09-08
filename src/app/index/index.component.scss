@@ -1,5 +1,11 @@
 .container-fluid {
-  background: #f5f7fa;
+  background-color: #243066;
+  color: #fff;
+  padding: 0% !important;
+}
+
+.sidebar-bg, .header-bg {
+  background-color: #1a1a1a9e;
 }
 
 .sidebar {
@@ -9,7 +15,7 @@
   height: 100vh;
   width: 100%;
   max-width: 320px;
-  background-color: #fff;
+  background-color: #2e2e2e;
   z-index: 1;
   overflow-y: auto;
 }
@@ -19,7 +25,7 @@
   top: 0;
   left: 17.5%;
   width: calc(100% - 17%);
-  background-color: #ffffff;
+  background-color: #2e2e2e;
   padding: 25px 20px;
 }
 
@@ -28,7 +34,7 @@
   left: 17.5%;
   height: auto;
   width: calc(100% - 17%);
-  background-color: #ffffff;
+  background-color: #000000;
   padding: 10px 20px;
 }
 

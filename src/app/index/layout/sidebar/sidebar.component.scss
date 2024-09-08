@@ -1,4 +1,4 @@
-$orange_color: #fb6f10;
+$orange_color: #291507;
 
 main {
   height: 100vh;
@@ -35,6 +35,8 @@ a {
   background-color: $orange_color;
   border-radius: 10px;
   color: #fff;
+  border: 1px solid #ff4500;
+  border-left: 10px solid #ff4500;
 }
 
 .hms-title {

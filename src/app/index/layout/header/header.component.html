@@ -1,1 +1,33 @@
-<p>header works!</p>
+<div class="d-flex justify-content-between align-items-center">
+  <div class="pt-3 pb-3 title-label">
+    <span class="fw-normal text-truncate">Mumtaz General Store Turi Market</span>
+  </div>
+
+  <div class="d-flex align-items-center gap-4">
+
+    <i class="fab fa-badge-dollar"></i>
+
+    <mat-icon>settings</mat-icon>
+
+    <mat-icon matBadge="4">notifications</mat-icon>
+
+    <div>
+      <img
+        src="../../../../assets/images/icons/avatar.png"
+        alt="image not preview"
+        class="user-img"
+        [matMenuTriggerFor]="menu"
+      />
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>
+          <mat-icon>person</mat-icon>
+          <span>Ali Ijaz</span>
+        </button>
+        <button mat-menu-item>
+          <mat-icon>exit_to_app</mat-icon>
+          <span>Logout</span>
+        </button>
+      </mat-menu>
+    </div>
+  </div>
+</div>

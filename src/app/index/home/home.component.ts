@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, RouterOutlet } from '@angular/router';
+import { Title } from '@angular/platform-browser';
 
 declare let AOS: any;
 
@@ -12,14 +13,15 @@ declare let AOS: any;
   imports: [CommonModule, RouterOutlet, RouterModule],
 })
 export class HomeComponent implements OnInit {
-  title = 'mumtaz-shop';
   countdown: string = '';
   intervalId: any;
 
-  constructor() {}
+  constructor(private title: Title) {}
 
   ngOnInit(): void {
     this.startCountdown();
+
+    this.title.setTitle('Mumtaz Shop - Home');
 
     AOS.init({
       offset: 20,
